@@ -1,0 +1,200 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+-- -----------------------------------------------------
+-- Schema jobbydb
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema jobbydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `jobbydb` ;
+USE `jobbydb` ;
+
+-- -----------------------------------------------------
+-- Table `jobbydb`.`clientAnswer`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `jobbydb`.`clientAnswer` ;
+
+CREATE TABLE IF NOT EXISTS `jobbydb`.`clientAnswer` (
+  `clientAnswerId` INT NOT NULL AUTO_INCREMENT,
+  `clientAnswerLabel` TINYTEXT NULL,
+  `clientAnswerIsCreated` DATETIME NULL DEFAULT NOW(),
+  `clientAnswer_possibleResponseId` INT NULL,
+  `clientAnswer_demandQuestionId` INT NULL,
+  PRIMARY KEY (`clientAnswerId`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `jobbydb`.`possibleResponse`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `jobbydb`.`possibleResponse` ;
+
+CREATE TABLE IF NOT EXISTS `jobbydb`.`possibleResponse` (
+  `possibleResponseId` INT NOT NULL AUTO_INCREMENT,
+  `possibleResponseOrder` INT NULL,
+  `possibleResponseLabel` TINYTEXT NULL,
+  `possibleResponseCode` TINYTEXT NULL,
+  `possibleResponseIsCreated` DATETIME NULL DEFAULT NOW(),
+  `possibleResponse_questionId` VARCHAR(45) NULL,
+  PRIMARY KEY (`possibleResponseId`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `jobbydb`.`demandQuestion`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `jobbydb`.`demandQuestion` ;
+
+CREATE TABLE IF NOT EXISTS `jobbydb`.`demandQuestion` (
+  `demandQuestionId` INT NOT NULL AUTO_INCREMENT,
+  `demandQuestion_demandId` INT NULL,
+  `demandQuestion_questionId` INT NULL,
+  PRIMARY KEY (`demandQuestionId`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `jobbydb`.`question`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `jobbydb`.`question` ;
+
+CREATE TABLE IF NOT EXISTS `jobbydb`.`question` (
+  `questionId` INT NOT NULL AUTO_INCREMENT,
+  `questionCode` TINYTEXT NULL,
+  `questionOrder` INT NULL,
+  `questionLabel` TINYTEXT NULL,
+  `questionIsCreated` DATETIME NULL DEFAULT NOW(),
+  `questionIsArchived` TINYINT(1) NULL DEFAULT 0,
+  `question_categoryId` INT NULL,
+  `question_questionTypeId` INT NULL,
+  PRIMARY KEY (`questionId`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `jobbydb`.`category`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `jobbydb`.`category` ;
+
+CREATE TABLE IF NOT EXISTS `jobbydb`.`category` (
+  `categoryId` INT NOT NULL AUTO_INCREMENT,
+  `categoryLabel` TINYTEXT NULL,
+  `categoryImg` TINYTEXT NULL,
+  `categoryCode` TINYTEXT NULL,
+  `categoryIsCreated` DATETIME NULL DEFAULT NOW(),
+  `categoryIsArchived` TINYINT(1) NULL DEFAULT 0,
+  PRIMARY KEY (`categoryId`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `jobbydb`.`message`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `jobbydb`.`message` ;
+
+CREATE TABLE IF NOT EXISTS `jobbydb`.`message` (
+  `messageId` INT NOT NULL AUTO_INCREMENT,
+  `messageLabel` TEXT(3000) NULL,
+  `messageCode` INT NULL,
+  `messageIsCreated` DATETIME NULL DEFAULT NOW(),
+  `messageIsArchived` TINYINT(1) NULL,
+  `message_proId` INT NULL,
+  `message_demandId` INT NULL,
+  PRIMARY KEY (`messageId`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `jobbydb`.`demand`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `jobbydb`.`demand` ;
+
+CREATE TABLE IF NOT EXISTS `jobbydb`.`demand` (
+  `demandId` INT NOT NULL AUTO_INCREMENT,
+  `demandCode` TINYTEXT NULL,
+  `demandIsCreated` DATETIME NULL DEFAULT NOW(),
+  `demandIsArchived` TINYINT(1) NULL DEFAULT 0,
+  `demand_userId` INT NULL,
+  PRIMARY KEY (`demandId`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `jobbydb`.`adress`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `jobbydb`.`adress` ;
+
+CREATE TABLE IF NOT EXISTS `jobbydb`.`adress` (
+  `adressId` INT NOT NULL AUTO_INCREMENT,
+  `adressLabel` TINYTEXT NULL,
+  `adressCountry` VARCHAR(45) NULL,
+  `adressRegion` VARCHAR(45) NULL,
+  `adressCity` VARCHAR(45) NULL,
+  `adressZipCode` INT NULL,
+  `adressStreetNumber` INT NULL,
+  `adressStreetName` TINYTEXT NULL,
+  `adressIsCreated` DATETIME NULL DEFAULT NOW(),
+  `adress_proId` INT NULL,
+  `adress_userId` INT NULL,
+  `adressCode` TINYTEXT NULL,
+  PRIMARY KEY (`adressId`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `jobbydb`.`user`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `jobbydb`.`user` ;
+
+CREATE TABLE IF NOT EXISTS `jobbydb`.`user` (
+  `userId` INT NOT NULL AUTO_INCREMENT,
+  `userPseudo` VARCHAR(45) NULL,
+  `userPassword` VARCHAR(45) NULL,
+  `userMail` VARCHAR(45) NULL,
+  `userIsCreated` DATETIME NULL DEFAULT NOW(),
+  `userFirstName` VARCHAR(45) NULL,
+  `userLastName` VARCHAR(45) NULL,
+  `userAge` INT NULL,
+  `userPhone` INT NULL,
+  `userCode` TINYTEXT NULL,
+  PRIMARY KEY (`userId`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `jobbydb`.`pro`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `jobbydb`.`pro` ;
+
+CREATE TABLE IF NOT EXISTS `jobbydb`.`pro` (
+  `proId` INT NOT NULL AUTO_INCREMENT,
+  `proName` VARCHAR(45) NULL,
+  `proMail` VARCHAR(45) NULL,
+  `proIsCreated` DATETIME NULL DEFAULT NOW(),
+  `proPhone` INT NULL,
+  `proCode` TINYTEXT NULL,
+  PRIMARY KEY (`proId`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `jobbydb`.`questionType`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `jobbydb`.`questionType` ;
+
+CREATE TABLE IF NOT EXISTS `jobbydb`.`questionType` (
+  `questionTypeId` INT NOT NULL AUTO_INCREMENT,
+  `questionTypeLabel` VARCHAR(50) NULL,
+  PRIMARY KEY (`questionTypeId`))
+ENGINE = InnoDB;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+

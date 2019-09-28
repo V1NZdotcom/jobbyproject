@@ -1,0 +1,13 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: blueviolet;
+    text-decoration: none;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+.background-img{
+    background-image: url("../img/U47azBZ.jpg");
+    height:100vh;
+}

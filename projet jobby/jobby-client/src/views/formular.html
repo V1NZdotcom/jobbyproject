@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content= "Site de prestation en ligne Jobby">
+    <link rel="stylesheet" href="../css/formular.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+    <title>Jobby</title>
+    
+    
+    <script language="javascript" src="/jquery/jquery.min.js"></script>
+    <script language="javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css"/>
+
+    <!-- passer data api dans mon html -->
+    <script id="myNodeData">{"categoryId":{{toto}}}</script>
+        <!-- algo qui affiche mes formulaires dynamiquement -->
+    <script src="/mesjsclients/categorie-formular-client.js"></script>
+ 
+    <script src="/mesjsclients/categorie-formular-client.js"></script>
+    
+
+</head>
+<body onload="entryPoint()">
+<main class="main-container">
+        <section class="menu-box">
+            <div class="title-box">
+                <h1 class="logo">
+                    <a href="/home.html" class="blueviolet">JOBBY</a>
+                </h1>
+            </div>
+            <div class="menu-items">
+                <a href="">Enregistrement</a>
+                <a href="">Connexion</a>
+                <a href="">À Propos</a>
+                <a href="">Contact</a>
+            </div class="menu-items">
+        </section>
+        <section>
+            <h2>Quelques questions pour affiner votre demande</h2>
+        </section>
+        
+        <section> 
+                <div data-backdrop="static" data-keyboard="false" class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Entrez votre e-mail</h5>
+                            </div>
+                            <div class="modal-body ">
+                              <input class=" w-100" type="email" name="email" id="emailClient">
+                            </div>
+                            <div class="modal-footer">
+                              <button id="saveClient" type="button" class="btn btn-warning">Enregistrer</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        </section>
+        <form id="myForm" action="{{tata}}"></form>
+
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+</main>
+</body>
+<script>
+
+function setEmail(){
+    var emailClientDOM = document.querySelector("#emailClient")
+    var value = emailClientDOM.value
+    if (validateEmail(value)===true){
+        localStorage.setItem('email', value);
+        $('#myModal').modal ('hide')
+    }
+/**
+    if(localStorage.getItem('myEmails')){
+        var myEmails = JSON.parse(localStorage.getItem('myEmails'))
+        myEmails.push(value)
+
+        localStorage.setItem('myEmails', JSON.stringify(myEmails));
+    }
+    else {
+        localStorage.setItem('myEmails', JSON.stringify([value]));
+        
+    }
+    **/
+
+}
+if (localStorage.getItem("email") === null) {
+    $('#myModal').modal ('show')
+}
+
+function validateEmail(emailField){
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,5})$/;
+        if (reg.test(emailField) == false) 
+        {
+            $('.alert').alert();
+            return false;
+        }
+
+        return true;
+
+}
+
+var saveClientDOM = document.querySelector("#saveClient")
+saveClientDOM.addEventListener('click', setEmail)
+
+
+</script>
+</html>

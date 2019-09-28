@@ -1,0 +1,12 @@
+[
+	{
+		"label": "Réparation",
+		"code ": "codeDeCatégorie2",
+		"type ": "category"
+    },
+    {
+		"label": "Cuisine",
+		"code ": "codeDeCatégorie3",
+		"type ": "category"
+    }
+]

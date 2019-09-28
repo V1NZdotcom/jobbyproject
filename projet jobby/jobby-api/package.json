@@ -1,0 +1,24 @@
+{
+  "name": "jobby-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "jobby-server-api": "nodemon src/node/server-api.js",
+    "dev": "npm install && npm run jobby-server-api"
+  },
+  "author": "vinz",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "eslint": "^5.10.0",
+    "express": "^4.16.4",
+    "express-validator": "^5.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.10.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}

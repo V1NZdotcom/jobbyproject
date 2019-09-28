@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content= "Site de prestation en ligne Jobby">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/categories.css">
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Vaani|Secular+One" rel="stylesheet">
+    <title>Jobby Admin</title>
+    </head>
+<body>
+  <!-- Boîte principale contenant les autres boites de la page--> 
+   <main class= "container-fluid border border-primary" >
+     <!-- Barre menu en haut avec le titre, se connecter,contact etc...-->
+    <section class="container-fluid border border-warning">
+        <!-- NAmepage JOBBY en haut à gauche --> 
+        <div class="row">
+            <a href="./home.html" class="col-md-6   border border-success text-center text-dark"><h1>JOBBY Admin</h1></a>
+            <!-- MEnu clickable en haut a droite -->
+            <a href="" class="menu-item col  text-center mt-3 text-dark">Enregistrement</a>
+            <a href="" class="menu-item  col  text-center mt-3 text-dark">Connexion</a>
+            <a href="" class="menu-item  col  text-center mt-3 text-dark">À Propos</a>
+            <a href="" class="menu-item  col  text-center mt-3 text-dark">Contact</a>
+        </div>
+</section>
+<section class="container border border-secondary ">     
+        <div class="row">
+          <img src="./img/workers2.jpg" alt="Working Outfit" class="col h-50">
+       </div>
+</section>
+<section class="container border border-info">   
+   <h3 class="text-center mt-3">TABLEAU DES CATÉGORIES</h3>
+</section>
+<section>  
+        <table class="table table-hover container">
+                  <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">LABEL</th>
+                    <th scope="col">CODE</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <th scope="row"> <a href="./category.html">1</a> </th>
+                    <td> <a class="text-dark" href="./category.html">RÉPARATION</a> </td>
+                    <td> <a class="text-dark" href="./category.html">48548548856</a> </td> 
+                  </tr>
+                  <tr>
+                    <th scope="row"> <a href="./category.html">2</a> </th>
+                    <td> <a class="text-dark" href="./category.html">LIVRAISON</a> </td>
+                    <td> <a class="text-dark" href="./category.html">34919497169</a> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"> <a href="./category.html">3</a> </th>
+                    <td> <a class="text-dark" href="./category.html">TRANSPORT</a> </td>
+                    <td> <a class="text-dark" href="./category.html">54976282435</a> </td>
+                  </tr>
+                </tbody>
+        </table>
+<section class="container">
+                  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary w-100" data-toggle="modal" data-target="#exampleModal"> AJOUTER</button>
+      <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">  
+        <form>
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Ajouter une catégorie</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+</button>
+            </div>
+            <div class="modal-body">
+            <div class="form-group">
+            <div class="col-md-4 mb-3">
+                <input type="text" name="categoryName" class="w-100 form-control" required>
+            </div>
+            </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button class="btn btn-primary" type="submit"> <a href="./category.html" class="text-light">AJOUTER</a> </button>
+            </div>
+            </div>
+            </div>
+        </form>
+            </div>
+</section>
+</section>
+</main>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html> 

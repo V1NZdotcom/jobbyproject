@@ -1,0 +1,196 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: black;
+    text-decoration: none;
+    font-family: 'Mukta Vaani', sans-serif; 
+}
+/* BOITE PRINCIPALE CONTENANT LES AUTRES BOITES */ 
+.main-container{
+    height: 100vh;
+    background-color: white;
+}
+/* BARRE DU MENU DU HAUT DE LA PAGE*/
+.menu-box{
+    display: flex;
+    height: 10%;
+    background-color: white;
+}
+/* BOITE DU NAMEPAGE JOBBY EN HAUT A GAUCHE */
+.title-box{
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    border-radius: 50% 20% / 10% 40%;
+}
+/*
+.title-box > h1 > a:hover{
+    color:black;
+}*/
+/* MODIFS DU TITRE */
+.titlepage:hover{
+    color:black;
+}
+.logo:hover{
+    transform: scale(1.5) skew(-8deg);
+}
+.titlepage{
+    font-size: 2.8rem;
+    font-family: 'Secular One', sans-serif;
+}
+/* MODIFS DU MENU CLICKABLE EN HAUT A DROITE */
+.menu-items{
+    width: 66.66%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    background-color:white;
+    border-radius:45px;
+}.menu-items>a{
+    font-family: 'Secular One', sans-serif;
+    font-weight: 500;
+    color: #BEB0A7;
+}
+.menu-items>a:hover{
+    transform:rotate(-3deg) scale(1.8);
+}
+.main-img{
+    height: 70%;
+    background-image: url("../img/workers2.jpg");
+    width: 90%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 10%;
+}
+.categories-box{
+    height:60%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.categorie-box{
+    width: 23%;
+    height: 100%;
+    margin-bottom: 1%;
+    margin-top: 5%;
+}
+.categorie-box:hover{
+   /* transform:rotate(-3deg) scale(1.1); */
+    transform: rotate3d(1.5, 1.5, 1.5 ,30deg)
+}
+h4{
+    height: 10%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #BEB0A7;
+}
+img{
+    height:90vh;
+    width: 100vw;
+}
+.categorie-img{
+    width:100%;
+    height:85%;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width:414px){
+    .menu-box{
+        flex-direction: column;
+        align-items: center;
+        }
+    .menu-items{
+        padding: 1% 2%;
+        font-size: 0.8rem;
+        width: 100%;
+        }
+    .main-img{
+        height: 25%;
+        margin-left: 5%;
+        }      
+    .categorie-box{
+        height: 80%;
+        width: 80%;
+        }
+    }   
+@media (min-width:768px){
+    .main-img{
+        height: 30%;
+        margin-left: 5%;
+    }
+    .categorie-box{
+        height: 50%;
+    }
+}
+@media(min-width:812px){
+     .main-img{
+         height: 80%;
+     }
+     .categorie-box{
+         height: 100%;
+    }
+}
+@media (min-width:1024px){
+        .main-img{
+            height: 55%;
+        }
+        .categorie-box{
+            height: 55%;
+        }
+}
+ @media (min-height:1366px){
+        .main-img{
+            height: 30%
+        }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

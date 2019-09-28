@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+        
+           <form id="radioChoice" action="">
+
+
+            </form>
+        
+</body>
+<script >
+  
+    possiblesResponses=[
+      {
+        code: 'code de la réponse 1',
+        label: 'hors service',
+      },
+      {
+        code: 'code de la réponse 2',
+        label: 'très défectueux',
+      },
+      {
+        code: 'code de la réponse 3',
+        label: 'un peu défectueux',
+      },
+    ]
+
+
+    
+ function inputRadioGenerator(myPossiblesResponses){
+
+  //Retour html
+  var myReturnHTML = ""
+  // je boucle la data
+  for( var index=0; index < myPossiblesResponses.length ; index ++ ){
+      //je recup la valeur courante
+      var possibleResponse = myPossiblesResponses[index]
+    var labelResponse = possibleResponse.label
+      
+      // je template
+      templateResponse = `<label for="repairQuestions">${labelResponse}  </label>     <input type="radio" value="${labelResponse}" name="repairQuestions">
+                        
+      `
+      // je concatene
+      myReturnHTML = myReturnHTML + templateResponse
+  }
+  return myReturnHTML
+}
+
+// dom d'affichage
+var radioChoiceDOM = document.querySelector("#radioChoice");
+radioChoiceDOM.innerHTML = inputRadioGenerator(possiblesResponses) 
+
+//                 <label for="repairQuestions"> Hors-service </label>               < input  type="radio"  value="hors service"  name="repairQuestions">
+//très défectueux
+
+
+
+
+
+
+
+</script>
+
+</html>

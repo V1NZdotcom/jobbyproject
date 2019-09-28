@@ -1,0 +1,47 @@
+{"message":"Hello again distributed logs","level":"error"}
+{"message":"Hello again distributed logs","level":"info"}
+{"message":{},"level":"info"}
+{"message":{"toto":1},"level":"info"}
+{"message":{"toto":1},"level":"info"}
+{"message":{"toto":1},"level":"info"}
+{"message":{"toto":1},"level":"info"}
+{"message":{"toto":1},"level":"info"}
+{"message":{"toto":1},"level":"info"}
+{"message":{"toto":1},"level":"info"}
+{"message":{"toto":1},"level":"info"}
+{"message":{"toto":1},"level":"info"}
+{"message":{"toto":1},"level":"info"}
+{"message":{"toto":1},"level":"info"}
+{"message":{"toto":1},"level":"info"}
+{"message":{"toto":1},"level":"info"}
+{"message":{"toto":1},"level":"info"}
+{"message":{"toto":1},"level":"info"}
+{"message":{"codeDeLaQuestion4":"foot","codeDeLaQuestion5":"Soumettre"},"level":"info"}
+{"message":{"codeDeLaQuestion4":"foot","codeDeLaQuestion5":"Soumettre"},"level":"info"}
+{"message":{"codeDeLaQuestion4":"foot","codeDeLaQuestion5":"Soumettre"},"level":"info"}
+{"message":{"codeDeLaQuestion4":"foot","codeDeLaQuestion5":"Soumettre"},"level":"info"}
+{"message":{"codeDeLaQuestion4":"foot","codeDeLaQuestion5":"Soumettre"},"level":"info"}
+{"message":{"codeDeLaQuestion4":"foot","codeDeLaQuestion5":"Soumettre"},"level":"info"}
+{"message":{"codeDeLaQuestion4":"foot","codeDeLaQuestion5":"Soumettre"},"level":"info"}
+{"message":{"codeDeLaQuestion4":"foot","codeDeLaQuestion5":"Soumettre"},"level":"info"}
+{"message":{"codeDeLaQuestion4":"foot","codeDeLaQuestion5":"Soumettre"},"level":"info"}
+{"message":"un truc","level":"info"}
+{"message":"un truc","level":"info"}
+{"message":"un truc","level":"info"}
+{"message":"un truc","level":"info"}
+{"message":"un truc","level":"info"}
+{"message":"un truc","level":"info"}
+{"message":"un truc","level":"info"}
+{"message":"un truc","level":"info"}
+{"message":"un truc","level":"info"}
+{"message":"un xxxxxx","level":"info"}
+{"message":"un xxxxxx","level":"info"}
+{"message":"un xxxxxx","level":"info"}
+{"message":"un xxxxxx","level":"info"}
+{"message":"un xxxxxx","level":"info"}
+{"message":"un xxxxxx","level":"info"}
+{"message":"un xxxxxx","level":"info"}
+{"message":"un xxxxxx","level":"info"}
+{"message":"un xxxxxx","level":"info"}
+{"message":"un xxxxxx","level":"info"}
+{"message":"un xxxxxx","level":"info"}

@@ -1,0 +1,40 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: black;
+    text-decoration: none;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width:414px){
+    .mb-5{
+        font-size:"5rem";
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

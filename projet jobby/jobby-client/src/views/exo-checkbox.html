@@ -1,0 +1,42 @@
+
+<script>
+    
+var 
+    possiblesResponses= [
+     {
+        code: 'code de la réponse 4',
+        label: 'frigo',
+      },
+      {
+        code: 'code de la réponse 5',
+        label: 'four',
+      },
+      
+      {
+        code: 'code de la réponse 6',
+        label: 'mixeur',
+      },
+    ]
+function inputCheckboxGenerator(myPossiblesResponses){
+    var myReturnHTML = ""
+    for( var index=0; index < myPossiblesResponses.length ; index ++ ){
+        var value = myPossiblesResponses[index]
+        var label = value.label
+        var template = `${label}<input type="checkbox" value="${value.label}">`
+        myReturnHTML = myReturnHTML + template
+    }
+    return myReturnHTML;
+}
+var mesInputCheckbox = inputCheckboxGenerator(possiblesResponses)
+
+// frigo
+// mixeur
+
+// <input type="checkbox" value="frigo">
+// <input type="checkbox" value="mixeur">
+
+
+</script>
+
+
+

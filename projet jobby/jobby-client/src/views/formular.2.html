@@ -1,0 +1,66 @@
+<script>
+
+var possiblesResponses= [
+      {
+        code: 'code de la réponse 4',
+        label: 'foot',
+      },
+      {
+        code: 'code de la réponse 5',
+        label: 'baseball',
+      },
+      {
+        code: 'code de la réponse 6',
+        label: 'ping pông',
+      },
+    ]
+
+function inputSelectGenerator(myPossiblesResponses){
+  var myReturnHTML =""
+  var beginSelect = "<select>"
+      myReturnHTML = myReturnHTML + beginSelect
+    for( var index=0; index < myPossiblesResponses.length ; index ++ ){
+    var value = myPossiblesResponses[index]
+    var label = value.label
+  var optionSelect = `<option value="">${value.label}</option>`
+  myReturnHTML = myReturnHTML + optionSelect
+  }
+  var endSelect = "</select>"
+  myReturnHTML = myReturnHTML + endSelect
+  return myReturnHTML;
+}
+
+var inputSelect = inputSelectGenerator(possiblesResponses)
+
+
+
+
+
+
+
+
+
+// <select><option value="">foot</option><option value="">foot</option><option value="">foot</option></select>
+
+
+
+// <select> 
+// <option value="">foot</option>
+// <option value="">foot</option>
+// <option value="">foot</option>
+// </select>
+
+
+// <select id="pet-select">
+//     <option value="">--Please choose an option--</option>
+//     <option value="dog">Dog</option>
+//     <option value="cat">Cat</option>
+//     <option value="hamster">Hamster</option>
+//     <option value="parrot">Parrot</option>
+//     <option value="spider">Spider</option>
+//     <option value="goldfish">Goldfish</option>
+// </select>
+
+
+
+</script>
